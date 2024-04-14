@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Web Page</title>
+<style>
+    body {
+        background-color: #f8f8f8; /* Set off-white background color */
+        color: black; /* Set text color to black */
+        font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+        margin: 0;
+        overflow-y: scroll; /* Enable vertical scrolling */
+    }
+
+    /* Header Styles */
+    header {
+        background-image: url('Picture2.png'); /* Set Picture2.png as the background image */
+        background-size: cover; /* Cover the entire header */
+        background-position: center; /* Center the background image */
+        text-align: center;
+        width: 100%;
+        top: 0;
+        z-index: 1000; /* Ensure header is above other content */
+        padding: 130px 0; /* Increased header size */
+    }
+
+    header img {
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        opacity: 0.7; /* Set opacity for the UEM_logo.png */
+    }
+
+    header button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: orange;
+        color: white; /* Set text color to white */
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+
+    header button:hover {
+        background-color: yellow;
+    }
+
+    /* Content Styles */
+    .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item img,
+.item video {
+    max-width: 100%; /* Ensure images and videos don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure images and videos don't exceed container height*/
+}
+
+    .section {
+        padding-top: 50px; /* Adjusted padding to account for the header height */
+        padding-bottom: 50px; /* Added padding to the bottom for spacing */
+        background-color: rgba(255, 255, 255, 0.8); /* Set section background color with transparency */
+        color: black; /* Set text color to black */
+        text-align: left; /* Align text to the left */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center items horizontally */
+        align-items: flex-start; /* Align items to the top */
+        position: relative; /* Set position to relative */
+    }
+
+    .subheading {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-decoration: underline; /* Add underline to subheadings */
+        text-align: center; /* Center align subheadings */
+        animation: fadeIn 1s ease; /* Add animation */
+        text-transform: capitalize; /* Capitalize subheading */
+        font-weight: 700; /* Set font weight to bold */
+        font-family: 'DM Sans', sans-serif; /* Use DM Sans font */
+        text-transform: uppercase; /* Capitalize heading */
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .vision-text {
+        padding: 0 20px; /* Add padding for spacing */
+        text-align: left; /* Align text to the left */
+        font-size: 1rem; /* Make text size smaller */
+    }
+
+    .vision-text p {
+        margin-bottom: 20px; /* Add margin between paragraphs */
+    }
+
+    .image {
+        width: 500px; /* Adjust image width */
+        height: auto;
+        border-radius: 10px;
+        margin-left: 20px; /* Add margin for spacing */
+        opacity: 0.3; /* Set opacity for the image */
+        position: absolute; /* Position the image absolutely */
+        top: 50%; /* Set top position */
+        right: 50%; /* Set right position */
+        transform: translate(50%, -50%); /* Center the image */
+        z-index: -1; /* Set z-index to move the image behind the content */
+    }
+</style>
+</head>
+<body>
+<header>
+    <!-- The background image is applied directly to the header element -->
+    <img src="UEM_logo.png" alt="Logo">
+    <button onclick="scrollToSection('#vision')">Vision</button>
+    <button onclick="scrollToSection('#developments')">Developments</button>
+    <button onclick="scrollToSection('#creators')">Creators</button>
+    <button onclick="scrollToSection('#contact')">Contact</button>
+</header>
+
+<div id="vision" class="section"> <!-- Set position to relative for the section -->
+    <div class="vision-text">
+        <h2 class="subheading">Our Vision</h2>
+        <p>
+            Our vision is to pioneer innovation and technology in the field of robotics and artificial intelligence, setting new standards for sustainable solutions and societal impact. As a team of five passionate undergraduate B.Tech students and two dedicated professors from the University of Engineering and Management, Kolkata, we embark on a journey fueled by curiosity, creativity, and a drive for excellence.
+        </p>
+        <p>
+            Our journey began as a part of our semester innovation project, where our Dean challenged us to develop a robot capable of cleaning solar panels efficiently. In our fifth semester, we rose to the challenge and successfully engineered a prototype version 1 robot using Arduino and Bluetooth technology. This initial success inspired us to push the boundaries further.
+        </p>
+        <p>
+            In our current semester, the sixth, we have expanded our horizons by developing an innovative app for object detection using smartphones. This app not only showcases our technical prowess but also demonstrates our commitment to leveraging technology for practical solutions.
+        </p>
+        <p>
+            Looking ahead to the future, we are determined to fulfill our Dean's vision by completing the development of a sophisticated solar panel cleaning robot. Powered by Raspberry Pi and integrated with advanced AI models, this next-generation robot will revolutionize the field of renewable energy maintenance.
+        </p>
+        <p>
+            Our vision goes beyond mere technical achievements; it encompasses a desire to make a tangible difference in the world. By harnessing the power of innovation and collaboration, we aspire to create a sustainable future where technology serves humanity and the planet. With unwavering dedication and a spirit of innovation, we are poised to make our vision a reality.
+        </p>
+    </div>
+    <img src="UEM_logo.png" alt="UEM Logo" class="image">
+</div>
+
+<div id="developments" class="section">
+    <div class="vision-text">
+        <h2 class="subheading">RECENT DEVELOPMENTS</h2>
+        <div class="content">
+            <div class="item">
+                <p>
+                    We are excited to announce our recent developments in the field of robotics. Our team has successfully developed a state-of-the-art robot designed specifically for solar panel cleaning. This innovative robot is equipped with advanced cleaning mechanisms and is capable of efficiently removing dust and debris from solar panels, thereby maximizing their efficiency.
+                </p>
+            </div>
+            <div class="item">
+                <div class="video-container">
+                    <video width="560" height="315" controls autoplay loop>
+                        <source src="Media1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>
+                    In addition to its cleaning capabilities, the robot also features autonomous navigation capabilities, enabling it to navigate complex environments and access hard-to-reach areas with precision.
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    To showcase the capabilities of our robot, we have prepared a demonstration video. Watch the video below to see our robot in action:
+                </p>
+                <div class="video-container">
+                    <video width="560" height="315" controls autoplay loop>
+                        <source src="Media2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="creators" class="section">
+    <h2 class="subheading">Meet Our Creators</h2>
+    <!-- Add creators content here -->
+</div>
+
+<div id="contact" class="section">
+    <h2 class="subheading">Contact Us</h2>
+    <!-- Add contact content here -->
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
